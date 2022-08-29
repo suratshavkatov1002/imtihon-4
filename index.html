@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Book</title>
+</head>
+
+<body class="body">
+    <div class="header">
+        <div class="container-fluid">
+            <div class="header__container">
+                <div class="header__logo">
+                    <img class="header__logo-img" src="./img/bokshelderlogo.png" alt="" width="264" height="44">
+                </div>
+
+
+                <form class="form">
+                    <input class="input__search" type="text" placeholder="Search books">
+                </form>
+                <div class="header__search-quyosh">
+                    <img class="header__search-quyosh-img" src="./img/quyosh.png" alt="">
+                </div>
+            </div>
+            <hr class="hr">
+
+            <div class="hero__container">
+                <p class="hero__container-result">Showing <span class="result">0</span> Result(s)</p>
+
+                <div class="order__div ">
+                    <img class="order__img " src="./img/order__img.png" alt="" width="18" height="18">
+                    <p class="order__p">Order by newest</p>
+                </div>
+            </div>
+
+            <hr class="past">
+
+            <div class="main d-flex">
+                <div class="mb-4 left__site w-25">
+                    <div class="div">
+                        <div class="h3 ">Bookmarks</div>
+
+                        <p class="h5">
+                            If you don’t like to read, you haven’t found the right book
+                        </p>
+                    </div>
+
+                    <ul class="list-unstyled bookmark__wrapper">
+
+                    </ul>
+                </div>
+
+                <div class="card__wrapper row row-cols-1 row-cols-md-3 g-4 w-75 ">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade modal__wrapper w-50 " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+
+        </div>
+    </div>
+
+
+    <template class="card__template">
+		<div class="col card__col mt-5 p-4">
+			<div class="p-3 rounded-1 kitob__img">
+				<img src="./img/kitob.png" class="card-img-top" alt="..." width="202" height="201">
+			</div>
+			
+			<div class="card-body  p-0 mb-2">
+				<h5 class=" book__name card-title m-0">Card title</h5>
+				
+				<p class="book__name card-text after m-0">Some qu.</p>
+				
+				<p class=" book__name card-text m-0 data">Some qu.</p>
+				
+				<button class="btn btn-warning  btn__bookmark">
+					bookmark
+				</button>
+				
+				
+				<button type="button" class="btn more__info btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+					More Info
+				</button>
+				
+				<a target="_blank" class="btn btn-secondary go__somewher"  href="http://books.google.co.uz/books?id=21smDAAAQBAJ&pg=PA5&dq=1&hl=&cd=1&source=gbs_api" >Read</a>	
+
+			</div>
+			
+		</div>
+	</template>
+
+
+    <template class="book__template">
+		<li class="rang mb-3 w-75 p-2 rounded-1 d-flex">
+			<div class="me-5">
+				<h1 class=" book__name qora m-0 mb-1 h5">Python</h1>
+				<p class=" book__name1 qora m-0">David M. Beazley</p>
+			</div>
+			
+			<div class="mt-2">
+				<img src="./img/bookImg.png" alt="">
+				<img class="delete" src="./img/x.svg" alt="">
+			</div>
+		</li>
+	</template>
+
+
+    <template class="madal__temp">
+		
+		<div class="modal-content bg-info">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Python</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			
+			<div class="p-3 rounded-1 ">
+				<img   src="./img/kitob.png" class="card-img-top w-25 kitob__img2" alt="..." width="200" height="201" >
+			</div>
+			<div class="modal-body">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti esse iste odit ad, dolorum consequuntur deserunt ab quae? Dignissimos, ipsam aspernatur voluptate exercitationem minus nulla, totam quasi vel odit fugit autem nobis sint dolorum. Aut expedita
+				exercitationem commodi doloremque veritatis ipsa. Nemo libero inventore nostrum eum quaerat omnis eos illo? Quisquam exercitationem pariatur dolore alias accusamus sit veniam adipisci deleniti blanditiis corporis sequi, nobis optio repudiandae
+				eius, quis dicta aspernatur sed officiis a aperiam, minus veritatis asperiores est quidem. Numquam autem pariatur nesciunt a ipsam rem vero harum sunt dicta nisi quam minima debitis laboriosam officiis facere, illum error temporibus!
+			</div>
+			
+			<ul class="list-unstyled ms-2">
+				<li>
+					<p >Author:
+						<a class="autort" href="">Jamal Kasper</a>
+					</p>
+				</li>
+				
+				<li>
+					<p >Published : 
+						<a class="publised" href="">Jamal Kasper</a>
+					</p>
+				</li>
+				
+				<li>
+					<p> Publishers:
+						<a class="publisher" href="">Jamal Kasper</a>
+					</p>
+				</li>
+				
+				
+				<li>
+					<p >Categories:
+						<a class="categories" href="">Jamal Kasper</a>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</template>
+
+
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
